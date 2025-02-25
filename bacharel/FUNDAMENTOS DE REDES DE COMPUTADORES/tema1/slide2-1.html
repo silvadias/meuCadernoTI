@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parâmetros de Avaliação - Atraso em Redes de Comutação de Pacotes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #0078d4;
+            padding-bottom: 10px;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #333;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .media-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .media-container img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .media-container video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: #0078d4;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Parâmetros de Avaliação</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Atraso em Redes de Comutação de Pacotes</h2>
+            <p>Confira agora as principais reflexões sobre os parâmetros de avaliação.</p>
+
+            <div class="media-container">
+                <!-- Espaço para vídeo introdutório -->
+                <video controls>
+                    <source src="./video/slide2-1V1.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+
+            <p>O ideal seria que os serviços da internet transferissem dados entre sistemas finais, de modo instantâneo e sem nenhuma perda. Porém, as redes de computadores restringem a quantidade de dados que podem ser transferidos entre sistemas finais, apresentam atrasos entre sistemas finais e ainda podem perder pacotes. As leis da física introduzem atraso e perda.</p>
+
+            <p>Para ser possível a formulação de propostas de soluções para os problemas encontrados no funcionamento das redes de computadores, é recomendável examinar e quantificar esse contexto como parâmetros para avaliação das redes. Por isso, estudaremos os parâmetros relacionados ao atraso, à perda e vazão em redes de computadores.</p>
+        </section>
+
+        <section>
+            <h2>Tipos de Atraso</h2>
+            <p>Confira agora os principais pontos sobre tipos de atraso.</p>
+            <div class="media-container">
+                <!-- Espaço para vídeo introdutório -->
+                <video controls>
+                    <source src="./video/slide2-1V2.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+
+            <p>Considere um pacote enviado de um nó por meio do roteador A até o roteador B. Um pacote somente pode ser transmitido do roteador A ao B, se não houver nenhum outro pacote sendo transmitido pelo enlace e se não houver outros à sua frente na fila. Se o enlace estiver ocupado, ou com pacotes à espera, o recém-chegado entrará na fila (buffer, ou memória, do roteador). A imagem a seguir ilustra os elementos citados. Veja!</p>
+
+            <div class="media-container">
+                <!-- Espaço para imagem ilustrando o atraso no roteador -->
+                <img src="./img/slide2-1.png" alt="Ilustração do atraso de nó no roteador A">
+            </div>
+
+            <h3>O atraso de nó no roteador A</h3>
+            <p>Um pacote começa em um sistema final de origem, passa por vários roteadores até ser entregue em outro sistema final de destino. Quando um pacote viaja de um dispositivo ou um nó (sistema final ou roteador) ao nó subsequente (sistema final ou roteador), sofre, ao longo desse caminho, diversos tipos de atraso em cada nó. Os mais importantes deles são o atraso de processamento nodal, o atraso de fila, o atraso de transmissão e o atraso de propagação. Eles formam o atraso total.</p>
+
+            <p>O desempenho de muitas aplicações da internet é muito afetado por esses atrasos que ocorrem na rede. Vamos detalhá-los?</p>
+
+            <h3>Atraso de Processamento</h3>
+            <p>Tempo gasto em um dispositivo para examinar o cabeçalho do pacote e determinar por qual saída deve encaminhá-lo.</p>
+
+            <h3>Atraso de Fila</h3>
+            <p>Tempo decorrido enquanto um pacote espera para ser transmitido no enlace. Se a fila (buffer) estiver vazia, e nenhum outro pacote estiver sendo transmitido naquele momento, então o tempo de fila de nosso pacote será zero. Por outro lado, se o tráfego estiver intenso e houver muitos pacotes também esperando para serem transmitidos, o atraso de fila será longo.</p>
+
+            <h3>Atraso de Transmissão</h3>
+            <p>Tempo exigido para empurrar (isto é, transmitir) todos os bits do pacote para o enlace. É uma função do comprimento do pacote e da taxa de transmissão do enlace, mas nada tem a ver com a distância entre os roteadores.</p>
+
+            <h3>Atraso de Propagação</h3>
+            <p>Tempo necessário para propagar o bit desde o início do enlace até o próximo nó. O bit se desloca pelo meio de acordo com a velocidade de propagação do enlace, a qual depende do meio físico, isto é, se o meio utilizado é fibra ótica, fios de cobre e assim por diante. Este atraso é diretamente relacionado à distância entre os roteadores, mas nada tem a ver com o comprimento do pacote ou com a taxa de transmissão do enlace.</p>
+
+            <p>Importante ressaltar que os tipos de atraso se refletem nas aplicações de maneira diferente. As aplicações de tempo real, que têm interatividade, como jogos interativos, vídeo e áudio conferências, são mais suscetíveis ao atraso de propagação. Por outro lado, as aplicações que transferem um grande volume de dados, como transferências de arquivos, têm o atraso de transmissão como o ponto crítico.</p>
+        </section>
+
+        <section>
+            <h3>Comentário</h3>
+            <p>O atraso de fila pode variar de pacote para pacote. Por exemplo, se dez pacotes chegarem a uma fila vazia ao mesmo tempo, o primeiro pacote não sofrerá nenhum atraso de fila, ao passo que o último sofrerá um relativamente grande (enquanto espera que os outros nove sejam transmitidos). O processo de chegada a uma fila é aleatório.</p>
+
+            <p>Essa variação do atraso de fila causa um efeito chamado jitter (variação de atraso), que impacta significativamente as aplicações de streaming (multimídia), as quais precisam reproduzir os pacotes em intervalos regulares. Portanto, a variação do atraso impactará a reprodução em intervalos regulares, tendo em vista que os pacotes não chegarão com atrasos regulares.</p>
+
+           
+            <p>O que você achou do conteúdo?</p>
+            <p><a href="#">Relatar problema</a></p>
+        </section>
+
+        <nav>
+            <a href="#">Voltar</a>
+            <a href="#">Avançar</a>
+            <a href="#">Menu</a>
+        </nav>
+
+        <section>
+            <h3>Menu</h3>
+            <p>Redes de computadores e a internet</p>
+            <p>Módulos</p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#">Voltar</a>
+        <a href="#">Avançar</a>
+        <a href="#">Menu</a>
+    </footer>
+</body>
+</html>

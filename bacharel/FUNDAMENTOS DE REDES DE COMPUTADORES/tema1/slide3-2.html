@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camadas de Protocolo e Modelos de Serviço - Modelo OSI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #0078d4;
+            padding-bottom: 10px;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #333;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .media-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .media-container img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .media-container video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: #0078d4;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Camadas de Protocolo e Modelos de Serviço</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>O primeiro modelo de camadas</p>
+            <h2>Modelo de referência OSI</h2>
+            <div class="media-container">
+                <!-- Espaço para vídeo após o texto do modelo OSI -->
+                <video controls>
+                    <source src="./video/slide3-2.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+            <p>Confira agora os principais pontos sobre o modelo OSI.</p>
+            <p>No final dos anos 1970, a Organização Internacional para Padronização (International Organization for Standardization – ISO) propôs que as redes de computadores fossem organizadas em camadas, sendo cada camada responsável por realizar determinado serviço.</p>
+            <p>Esse esforço fez surgir um modelo de camadas que ficou conhecido como modelo RM-OSI (Reference Model Open Systems Interconnection), ou simplesmente modelo OSI, utilizado até hoje e composto por sete camadas, numeradas de cima para baixo: aplicação, apresentação, sessão, transporte, rede, enlace e física, conforme mostrado na imagem a seguir. Confira!</p>
+            <div class="media-container">
+                <img src="./img/slide3-2.jpg" alt="Modelo de referência OSI">
+            </div>
+            
+            <p>Importante ressaltar que o modelo OSI é utilizado como uma referência para o estudo e funcionamento das redes, entretanto, não é utilizado em si, principalmente porque ele não definiu protocolos, mas sim os serviços que cada camada oferece. Vamos detalhar essas camadas?</p>
+        </section>
+
+        <section>
+            <h3>Aplicação</h3>
+            <p>Nesta camada, residem as aplicações de rede que implementam os serviços de redes, como para transferir arquivos, enviar mensagens, entre outros. Um protocolo de camada de aplicação é executado nos sistemas finais, permitindo que as aplicações executadas nesses sistemas finais possam trocar informações por meio de mensagens.</p>
+        </section>
+
+        <section>
+            <h3>Apresentação</h3>
+            <p>Nesta camada, provê serviços que permitam às aplicações de comunicação interpretarem o significado dos dados trocados, ou seja, ela é responsável por garantir que sistemas diferentes possam trocar informações, como faz um tradutor. Entre esses serviços estão a compressão, criptografia e a codificação de dados.</p>
+        </section>
+
+        <section>
+            <h3>Sessão</h3>
+            <p>Nesta camada, há a delimitação e sincronização da troca de dados. É a camada que seria responsável, por exemplo, por permitir que, se você estivesse realizando um download de um arquivo e a conexão caísse, você retomasse a transferência a partir do último ponto de sincronização.</p>
+        </section>
+
+        <section>
+            <h3>Transporte</h3>
+            <p>Nesta camada, são carregadas mensagens da camada de aplicação entre os sistemas finais, garantindo que todos dados sejam trocados de forma correta, ou seja, sem perda, em ordem, sem sobrecarregar a rede e as máquinas. Um pacote da camada de transporte é denominado segmento.</p>
+        </section>
+
+        <section>
+            <h3>Rede</h3>
+            <p>Nesta camada, há a responsabilidade por determinar o caminho de um hospedeiro para outro. Para que esse serviço seja possível, os endereços lógicos são definidos na camada de rede, que identificam unicamente uma máquina na rede, e a função de roteamento. Os pacotes da camada de rede são conhecidos como datagramas.</p>
+        </section>
+
+        <section>
+            <h3>Enlace</h3>
+            <p>Nesta camada, leva-se um pacote, denominado quadro, de um nó ao nó seguinte, no caminho entre origem e destino. Em cada nó, a camada de rede passa o datagrama para a camada de enlace, que fica responsável por encaminhar o pacote de dados até o próximo nó, de forma confiável, ou seja, sem erros.</p>
+        </section>
+
+        <section>
+            <h3>Físico</h3>
+            <p>Nesta camada, os bits individuais que estão dentro do quadro de um nó para o seguinte são movimentados, transformando-os em algum tipo de sinal adequado a ser transmitido pelo meio de transmissão utilizado, por exemplo, fios de cobre ou fibra ótica.</p>
+        </section>
+
+        <section>
+            <h3>O que você achou do conteúdo?</h3>
+            <p><a href="">Relatar problema</a></p>
+        </section>
+
+        <nav>
+            <a href="">Voltar</a>
+            <a href="">Avançar</a>
+        </nav>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="">Redes de computadores e a internet</a>
+            <a href="">Módulos</a>
+        </nav>
+        
+    </footer>
+</body>
+</html>

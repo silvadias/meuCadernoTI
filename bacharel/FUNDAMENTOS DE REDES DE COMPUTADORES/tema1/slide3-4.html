@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camadas de Protocolo e Modelos de Serviço - Encapsulamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #0078d4;
+            padding-bottom: 10px;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #333;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .media-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .media-container img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .media-container video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: #0078d4;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Camadas de Protocolo e Modelos de Serviço</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>Encapsulamento</p>
+            <h2>Conceito de encapsulamento</h2>
+            <p>Confira a seguir os principais pontos sobre o encapsulamento.</p>
+            <div class="media-container">
+                <!-- Espaço para vídeo após o primeiro texto sobre Conceito de encapsulamento -->
+                <video controls>
+                    <source src="./video/slide3-4.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+            <p>Para compreender o conceito de encapsulamento, considere uma mensagem da camada de aplicação na máquina emissora que é passada para a camada de transporte. Essa camada pega a mensagem e anexa as informações de cabeçalho de camada de transporte. Essas informações serão usadas pela camada de transporte do lado receptor.</p><br>            
+            <section>
+                <h3>Comentário</h3>
+                <p>A mensagem da camada de aplicação e as informações de cabeçalho da camada de transporte, juntas, formam o que é chamado de Unidade de Dados de Protocolo, ou PDU (Protocol Data Unit), que, nesse caso, é chamado de segmento da camada de transporte, que encapsula a mensagem da camada de aplicação.</p>
+            </section>
+            <p>A camada de transporte então passa o segmento à camada de rede, que adiciona informações de cabeçalho de camada de rede, como endereços de sistemas finais de origem e de destino, criando um datagrama de camada de rede. Este é então passado para a camada de enlace, que adicionará suas próprias informações de cabeçalho e criará um quadro de camada de enlace. Finalmente, os dados são passados para a camada física, que transmite os dados na forma de bits pelo meio físico.</p>
+            <p>Em cada camada, um PDU possui campos de cabeçalho e um campo de carga útil. A carga útil é, em geral, um pacote da camada acima. Quando o pacote chega no sistema final destino, o processo de desencapsulamento se inicia. Na extremidade receptora, cada segmento deve ser reconstruído a partir dos datagramas que o compõem. O conceito de encapsulamento está ilustrado na imagem que veremos a seguir.</p>
+        </section>
+
+        
+
+        <section>
+            <h3>Caminho dos dados</h3>
+            <p>Quando um sistema final envia pacotes para outro sistema final, o caminho físico que os dados percorrem é o seguinte:</p>
+            <ul>
+                <li>Sentido para baixo na pilha de protocolos de um sistema final emissor.</li>
+                <li>Sentido para cima e para baixo nas pilhas de protocolos de um comutador e roteador de camada de enlace que estejam no caminho.</li>
+                <li>Depois para cima na pilha de protocolos do sistema final receptor.</li>
+            </ul>
+            <p>Os roteadores e comutadores de camada de enlace não implementam todas as camadas da pilha de protocolos. Por exemplo, os roteadores da internet são capazes de executar o protocolo IP (da camada 3), mas comutadores de camada de enlace não (só até a camada 2, de enlace). Os hospedeiros implementam todas as cinco camadas.</p>
+            <div class="media-container">
+                <img src="./img/slide3-4.png" alt="Pilha de protocolos da internet">
+            </div>
+        </section>
+
+        <section>
+            <h3>Conceito de encapsulamento</h3>
+            <!-- Este título é redundante no texto original, mas mantido para consistência -->
+            <p>O que você achou do conteúdo?</p>
+            <p><a href="">Relatar problema</a></p>
+        </section>
+
+        <nav>
+            <a href="">Voltar</a>
+            <a href="">Avançar</a>
+        </nav>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="">Redes de computadores e a internet</a>
+            <a href="">Módulos</a>
+        </nav>
+        <div class="media-container">
+            <img src="" alt="Conceito de encapsulamento">
+        </div>
+    </footer>
+</body>
+</html>

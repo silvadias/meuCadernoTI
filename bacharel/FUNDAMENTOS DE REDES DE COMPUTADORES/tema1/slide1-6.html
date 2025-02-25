@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos Básicos - A Rede como Serviço</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #0078d4;
+            padding-bottom: 10px;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #333;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .media-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .media-container img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .media-container video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: #0078d4;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conceitos Básicos</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>A Rede como Serviço</h2>
+            <p>Confira agora os principais pontos sobre a rede como serviço.</p>
+
+            <div class="media-container">
+                <!-- Espaço para vídeo introdutório -->
+                <video controls>
+                    <source src="./video/slide6.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+
+            <p>Podemos também descrever a internet como uma infraestrutura provedora de serviços a aplicações.</p>
+
+            <p>Existe uma quantidade grande de aplicações para internet (“aplicações distribuídas”), como correio eletrônico, navegadores da web, redes sociais, mensagem instantânea, voz sobre IP (VoIP), vídeo em tempo real, jogos distribuídos, compartilhamento de arquivos peer-to-peer (P2P), televisão pela internet, login remoto etc.</p>
+
+            <p>As aplicações da internet são executadas nos sistemas finais, e não nos comutadores localizados no núcleo da rede. Você precisará criar programas que sejam executados em sistemas finais, utilizando uma ou mais linguagens de programação, como Java, C ou Python.</p>
+        </section>
+
+        <section>
+            <h3>Saiba Mais</h3>
+            <p>Uma Interface de Programação de Aplicação (API) específica, como o programa executado no sistema final, consegue enviar os dados através da rede, para que alcance o sistema final de destino.</p>
+
+            <div class="media-container">
+                <!-- Espaço para imagem ilustrando a API ou o conceito de socket -->
+                <img src="./img/api-socket.png" alt="Ilustração da API Socket">
+            </div>
+
+            <p>Utilizando essa API, o desenvolvedor não precisa se preocupar em como as informações serão entregues ao destino, nem se sofreram algum tipo de erro no meio do caminho, muito menos como fazer para transformar os bits em sinais elétricos, pulsos de luz ou ondas eletromagnéticas para serem propagadas pelo espaço.</p>
+
+            <p>A infraestrutura de rede se encarrega de realizar todas essas ações que estarão distribuídas nos diversos componentes de rede, desde o sistema operacional existente no seu computador ou smartphone, passando pelos roteadores, switches, entre outros componentes.</p>
+
+            <p>E aí? Ficou curioso para saber qual API é essa que você pode utilizar? Acalme-se. Por enquanto, passaremos apenas o nome: socket.</p>
+
+
+            <p>O que você achou do conteúdo?</p>
+            <p><a href="#">Relatar problema</a></p>
+        </section>
+
+        <nav>
+            <a href="#">Voltar</a>
+            <a href="#">Avançar</a>
+            <a href="#">Menu</a>
+        </nav>
+
+        <section>
+            <h3>Menu</h3>
+            <p>Redes de computadores e a internet</p>
+            <p>Módulos</p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#">Voltar</a>
+        <a href="#">Avançar</a>
+        <a href="#">Menu</a>
+    </footer>
+</body>
+</html>

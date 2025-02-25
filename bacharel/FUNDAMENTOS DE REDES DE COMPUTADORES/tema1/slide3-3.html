@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camadas de Protocolo e Modelos de Serviço - Arquitetura TCP/IP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #0078d4;
+            padding-bottom: 10px;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #333;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .media-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .media-container img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .media-container video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: #0078d4;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Camadas de Protocolo e Modelos de Serviço</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>Arquitetura TCP/IP ou internet</p>
+            <h2>Arquitetura e Internet</h2>
+            <p>Confira agora os principais pontos sobre arquitetura e internet.</p>
+            <div class="media-container">
+                <!-- Espaço para vídeo após o primeiro texto sobre Arquitetura e Internet -->
+                <video controls>
+                    <source src="./video/slide3-3.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+            <p>Conforme comentamos, o modelo OSI é um modelo de referência e não é utilizado na prática.</p>            
+            <p>As redes que utilizamos empregam a arquitetura TCP/IP ou arquitetura internet. Originalmente, a arquitetura TCP/IP emprega quatro camadas (aplicação, transporte, inter-rede e intrarrede). Entretanto, por fins didáticos, utilizaremos um modelo formado por cinco camadas: aplicação, transporte, rede, enlace e físico, como mostra a imagem a seguir. No modelo de cinco camadas, a camada de intrarrede é dividida em camada de enlace e física. Confira!</p>
+            <div class="media-container">
+                <img src="./img/slide3-3.jpg" alt="Pilha de protocolos da internet">
+            </div>
+            <p>Conforme podemos observar, a diferença que temos entre o modelo OSI e a arquitetura de cinco camadas é a ausência das camadas de apresentação e sessão. As funções dessas duas camadas são absorvidas pela camada de aplicação.</p>
+            <p>Um detalhe que você deve ter percebido é que, quando falamos do OSI, sempre falamos sobre modelo e agora no TCP/IP estamos usando a expressão arquitetura. Por que essa diferença?</p>
+            <p>Essa diferença ocorre pelo fato de o OSI não definir protocolos. Já no TCP/IP, temos um conjunto de protocolos associados, conhecidos como a pilha de protocolos TCP/IP, que nada mais são do que o conjunto de protocolos implementados por todas as camadas da arquitetura.</p>
+        </section>
+
+        <section>
+            <h3>Pilha de protocolos da internet</h3>
+            <p>A camada de aplicação tem a mesma função da camada do modelo OSI, acrescido das funções da apresentação e sessão. Nessa camada, estão definidos alguns dos principais protocolos utilizados atualmente, como o HTTP (HyperText Transfer Protocolo), DNS (Domain Name Server), SMTP (Simple Mail Transfer Protocolo), entre muitos outros.</p>
+            <p>A camada de transporte tem a responsabilidade de garantir a confiabilidade das informações trocadas pelas aplicações. Há dois protocolos de transporte na internet, vejamos a seguir:</p>
+        </section>
+
+        <section>
+            <h3>TCP</h3>
+            <!-- Aqui você pode adicionar detalhes sobre o TCP, se desejar -->
+            <p>[Provê serviços orientados à conexão para suas aplicações. Alguns serviços são: entrega garantida de mensagens, controle de fluxo (compatibilização das velocidades do remetente e do receptor), controle de congestionamento (uma origem reduz sua velocidade de transmissão quando a rede está congestionada) e garantia da ordem das mensagens.]</p>
+        </section>
+
+        <section>
+            <h3>UDP</h3>
+            <!-- Aqui você pode adicionar detalhes sobre o UDP, se desejar -->
+            <p>[Provê serviço não orientado à conexão para suas aplicações. É um serviço econômico sem controle de fluxo e de congestionamento adequado para as aplicações que toleram perda de pacotes, mas não toleram atrasos.]</p>
+        </section>
+
+        <section>
+            <h3>Rede</h3>
+            <p>A camada de rede segue a mesma função da camada de rede do modelo OSI, mas agora são definidos o formato do endereço e as regras de encaminhamento. Essa definição é feita pelo protocolo IP (Internet Protocol).</p>
+        </section>
+
+        <section>
+            <h3>Enlace e Física</h3>
+            <p>As camadas de enlace e físicas não são definidas de forma explícita na arquitetura internet, mas elas executam o mesmo papel previsto no modelo OSI. Alguns dos padrões utilizados nessas camadas de enlace são o ethernet, wi-fi e bluetooth.</p>
+        </section>
+
+        <section>
+            <h3>O que você achou do conteúdo?</h3>
+            <p><a href="">Relatar problema</a></p>
+        </section>
+
+        <nav>
+            <a href="">Voltar</a>
+            <a href="">Avançar</a>
+        </nav>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="">Redes de computadores e a internet</a>
+            <a href="">Módulos</a>
+        </nav>
+        
+    </footer>
+</body>
+</html>
